@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="刀，刀具"/>
+    <meta name="keywords" content="刀，刀具"/>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <title>详细页</title>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.JNMagnifier.js"></script>
+</head>
+<body>
+<div class="header_top">
+    <div class="header_top_p">
+        <a href="#">member“slogin </a>
+        <a href="#">contact/Support</a>
+    </div>
+</div>
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <img src="images/logo1.png"/>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">  Home  </a></li>
+            <li ><a href="#">   Ander  </a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">knife
+                <b class="caret"></b>
+            </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">马来剑</a></li>
+                    <li><a href="#">马来剑</a></li>
+                    <li><a href="#">马来剑</a></li>
+                    <li><a href="#">马来剑</a></li>
+                    <li><a href="#">马来剑</a></li>
+                    <li><a href="#">马来剑</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Outdoor  </a></li>
+            <li><a href="#"> Foldback</a></li>
+        </ul>
+    </div>
+</div>
+<div style="width: 100%;border-bottom:solid 1px #4c4d4d "></div>
+<div class="main_details">
+    <ul class="shop">
+        <li><a href="#">Home</a> /</li>
+        <li><a href="#">Ander</a> /</li>
+        <li><a href="#"> Knife</a></li>
+    </ul>
+    <div style="background: url('images/x_1.png');width: 100%;height: 2px "></div>
+    <div class="detail_box">
+        <div class="detail">
+            <div class="tb-booth" id="bags">
+                <img src="images/x_t1.jpg">
+            </div>
+            <div class="tb-thumb">
+                <img alt="商品预览图1" src="images/l2.jpg" style="width: 50px">
+                <img alt="商品预览图2" src="images/x_t1.jpg" style="width: 50px">
+                <img alt="商品预览图3" src="images/l2.jpg" style="width: 50px">
+                <img alt="商品预览图4" src="images/x_t1.jpg" style="width: 50px">
+            </div>
+            <div id="bigView" style="position:absolute; top:150px; left:700px; overflow:hidden; display:none; border:3px solid #ccc; padding:5px; background-repeat:no-repeat; background-color:#fff; width:300px; height:300px;">
+            </div>
+        </div>
+    <script>
+        $(".tb-thumb img").mouseover(function() {
+            var src = $(this).attr("src");
+            $("#bags img").attr("src", src.replace("_x", "_b"));
+        });
+        $("#bags").JNMagnifier({
+            renderTo:"#bigView"
+        });
+    </script>
+        <div class="detail">
+            <div class="tb-detail-hd">
+                <h1>
+                    CRIMSON WEB
+                </h1>
+                <p>
+                    SALE  $ 69  Regular price$ 80
+                </p>
+                <div class="tb-detail-sellpoint"></div>
+            </div>
+            <div class="tb-sku">
+                <div class="tm-clear">
+                    <div class="tb-metatit">By color</div>
+                    <ul class="tb-img ">
+                        <li title="黑色">
+                            <a tabindex="0" role="button" href="#" style="background:url('images/x_x1.jpg')">
+                                <span>黑色</span>
+                            </a>
+                        </li>
+                        <li title="黑色">
+                            <a tabindex="0" role="button" href="#" style="background:url('images/x_x1.jpg')">
+                                <span>红色</span>
+                            </a>
+                        </li>
+                        <li title="黑色">
+                            <a tabindex="0" role="button" href="#" style="background:url('images/x_x1.jpg')">
+                                <span>蓝色</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tm-clear">
+                    <div class="tb-metatit">quantity</div>
+                    <div class="tb-img">
+                        <div class="add">+</div>
+                        <div class="txt">1</div>
+                        <div class="remo">-</div>
+                    </div>
+                </div>
+                <script>
+                    var i=1;
+                    $(".add").click(function(){
+                        i=i+1;
+                        $(".txt").html(i);
+                    });
+                    $(".remo").click(function(){
+                        i=i-1;
+                        if(i<1){i=1}
+                        $(".txt").html(i)
+                    })
+                </script>
+                <div class="tm-clear-p">
+                    <p>产品介绍Get it by Saturday, Aug. 6. Order within 13 hrs 51
+                        mins and choose this date at checkout.</p>
+                    <p>Ships from and sold by Amazon.com. Gift-wrap available</p>
+                </div>
+                <div class="tm-bnt">
+                    <a href="#"><img src="images/bt_l.png"></a>
+                    <a href="#"><img src="images/bt_r.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="x-info">
+        <li class="ks div-but1">产品介绍</li>
+        <li class="div-but2">产品参数</li>
+        <li class="div-but3">客服评价</li>
+    </div>
+    <div class="shop-box1">
+        <div class="div-box1" style="display:block">
+            <div class="x-info-title">
+                <p><samp>牌名称：</samp> CIMA关注</p>
+                <p><samp>产品参数：</samp></p>
+                <p><samp>刀尖角度：</samp> 60°</p>
+                <p><samp>价格区间：</samp></p>
+                <p><samp> 及以下刃长（mm)：</samp>95</p>
+                <p><samp>是否商场同款：</samp>否</p>
+                <p><samp>是否开刃：</samp>是</p>
+                <p><samp>货号：</samp>JY01</p>
+                <p><samp>产地：</samp> 中国</p>
+                <p><samp>吊牌价：</samp>158</p>
+                <p><samp> 颜色分类:</samp> 彩钛版 黄金版 黑色版 银色版 蓝色版 火焰版</p>
+                <p><samp> 骷髅版重量:</samp>101g(含)-150g(含)</p>
+                <p><samp> 展开长度:</samp>16cm(含)-20cm(含)</p>
+                <p><samp> 上市时间:</samp> 2015年冬季</p>
+                <p><samp> 价格区间:</samp>151-200元</p>
+                <p><samp></samp></p>
+                <p><samp></samp></p>
+            </div>
+            <div class="x-info-img">
+                <img src="images/x-bj.png">
+            </div>
+        </div>
+        <div class="div-box2">
+            <div class="x-info-title">
+                <p><samp>牌名称：</samp> CIMA关注</p>
+                <p><samp>产品参数：</samp></p>
+                <p><samp>刀尖角度：</samp> 60°</p>
+            </div>
+            <div class="x-info-img">
+            </div>
+        </div>
+        <div class="div-box3">
+            <div class="x-info-title">
+                <p>牌名称牌名称牌名称牌名称牌名称牌名称牌名称牌名称牌名称牌名称牌名称牌名称牌
+                    名称牌名名称牌名名称牌名称</p>
+                </p>
+                <p>产品参数产品参数产品参数产品参数产品参数产品参数产品参数产品参数产品参数</p>
+
+            </div>
+            <div class="x-info-img">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".x-info li").click(function(){
+        $(this).addClass("ks").siblings().removeClass("ks")
+    });
+    $(".div-but1").click(function(){
+        $(".div-box1").show();
+        $(".div-box2").hide();
+        $(".div-box3").hide();
+    });
+    $(".div-but2").click(function(){
+        $(".div-box2").show();
+        $(".div-box1").hide();
+        $(".div-box3").hide();
+    });
+    $(".div-but3").click(function(){
+        $(".div-box3").show();
+        $(".div-box2").hide();
+        $(".div-box1").hide();
+    });
+</script>
+<script>
+
+
+
+    $(document).ready(function(){
+        // 图片上下滚动
+        var count = $("#imageMenu li").length - 3; /* 显示 6 个 li标签内容 */
+        var interval = $("#imageMenu li:first").height();
+        var curIndex = 0;
+
+        $('.scrollbutton').click(function(){
+            if( $(this).hasClass('disabled') ) return false;
+
+            if ($(this).hasClass('smallImgUp')) --curIndex;
+            else ++curIndex;
+
+            $('.scrollbutton').removeClass('disabled');
+            if (curIndex == 0) $('.smallImgUp').addClass('disabled');
+            if (curIndex == count-1) $('.smallImgDown').addClass('disabled');
+
+            $("#imageMenu ul").stop(false, true).animate({"marginTop" : -curIndex*interval + "px"}, 600);
+        });
+
+        // 解决 ie6 select框 问题
+        $.fn.decorateIframe = function(options) {
+            if ($.browser.msie && $.browser.version < 7) {
+                var opts = $.extend({}, $.fn.decorateIframe.defaults, options);
+                $(this).each(function() {
+                    var $myThis = $(this);
+                    //创建一个IFRAME
+                    var divIframe = $("<iframe />");
+                    divIframe.attr("id", opts.iframeId);
+                    divIframe.css("position", "absolute");
+                    divIframe.css("display", "none");
+                    divIframe.css("display", "block");
+                    divIframe.css("z-index", opts.iframeZIndex);
+                    divIframe.css("border");
+                    divIframe.css("top", "0");
+                    divIframe.css("left", "0");
+                    if (opts.width == 0) {
+                        divIframe.css("width", $myThis.width() + parseInt($myThis.css("padding")) * 2 + "px");
+                    }
+                    if (opts.height == 0) {
+                        divIframe.css("height", $myThis.height() + parseInt($myThis.css("padding")) * 2 + "px");
+                    }
+                    divIframe.css("filter", "mask(color=#fff)");
+                    $myThis.append(divIframe);
+                });
+            }
+        }
+        $.fn.decorateIframe.defaults = {
+            iframeId: "decorateIframe1",
+            iframeZIndex: -1,
+            width: 0,
+            height: 0
+        }
+        //放大镜视窗
+        $("#bigView").decorateIframe();
+
+        //点击到中图
+        var midChangeHandler = null;
+
+        $("#imageMenu li img").bind("click", function(){
+            if ($(this).attr("id") != "onlickImg") {
+                midChange($(this).attr("src").replace("small", "mid"));
+                $("#imageMenu li").removeAttr("id");
+                $(this).parent().attr("id", "onlickImg");
+            }
+        }).bind("mouseover", function(){
+            if ($(this).attr("id") != "onlickImg") {
+                window.clearTimeout(midChangeHandler);
+                midChange($(this).attr("src").replace("small", "mid"));
+                $(this).css({ "border": "1px solid #dcdddd" });
+            }
+        }).bind("mouseout", function(){
+            if($(this).attr("id") != "onlickImg"){
+                $(this).removeAttr("style");
+                midChangeHandler = window.setTimeout(function(){
+                    midChange($("#onlickImg img").attr("src").replace("small", "mid"));
+                }, 1000);
+            }
+        });
+
+        function midChange(src) {
+            $("#midimg").attr("src", src).load(function() {
+                changeViewImg();
+            });
+        }
+
+        //大视窗看图
+        function mouseover(e) {
+            if ($("#winSelector").css("display") == "none") {
+                $("#winSelector,#bigView").show();
+            }
+
+            $("#winSelector").css(fixedPosition(e));
+            e.stopPropagation();
+        }
+
+
+        function mouseOut(e) {
+            if ($("#winSelector").css("display") != "none") {
+                $("#winSelector,#bigView").hide();
+            }
+            e.stopPropagation();
+        }
+
+
+        $("#midimg").mouseover(mouseover); //中图事件
+        $("#midimg,#winSelector").mousemove(mouseover).mouseout(mouseOut); //选择器事件
+
+        var $divWidth = $("#winSelector").width(); //选择器宽度
+        var $divHeight = $("#winSelector").height(); //选择器高度
+        var $imgWidth = $("#midimg").width(); //中图宽度
+        var $imgHeight = $("#midimg").height(); //中图高度
+        var $viewImgWidth = $viewImgHeight = $height = null; //IE加载后才能得到 大图宽度 大图高度 大图视窗高度
+
+        function changeViewImg() {
+            $("#bigView img").attr("src", $("#midimg").attr("src").replace("mid", "big"));
+        }
+
+        changeViewImg();
+
+        $("#bigView").scrollLeft(0).scrollTop(0);
+        function fixedPosition(e) {
+            if (e == null) {
+                return;
+            }
+            var $imgLeft = $("#midimg").offset().left; //中图左边距
+            var $imgTop = $("#midimg").offset().top; //中图上边距
+            X = e.pageX - $imgLeft - $divWidth / 2; //selector顶点坐标 X
+            Y = e.pageY - $imgTop - $divHeight / 2; //selector顶点坐标 Y
+            X = X < 0 ? 0 : X;
+            Y = Y < 0 ? 0 : Y;
+            X = X + $divWidth > $imgWidth ? $imgWidth - $divWidth : X;
+            Y = Y + $divHeight > $imgHeight ? $imgHeight - $divHeight : Y;
+
+            if ($viewImgWidth == null) {
+                $viewImgWidth = $("#bigView img").outerWidth();
+                $viewImgHeight = $("#bigView img").height();
+                if ($viewImgWidth < 200 || $viewImgHeight < 200) {
+                    $viewImgWidth = $viewImgHeight = 800;
+                }
+                $height = $divHeight * $viewImgHeight / $imgHeight;
+                $("#bigView").width($divWidth * $viewImgWidth / $imgWidth);
+                $("#bigView").height($height);
+            }
+
+            var scrollX = X * $viewImgWidth / $imgWidth;
+            var scrollY = Y * $viewImgHeight / $imgHeight;
+            $("#bigView img").css({ "left": scrollX * -1, "top": scrollY * -1 });
+            $("#bigView").css({ "top": 75, "left":522 });
+
+            return { left: X, top: Y };
+        }
+
+    });
+
+
+
+
+
+</script>
+<div class="foot_top">
+    <div class="foot_box">
+        <div class="foot_top_ul">
+            <img src="images/logo_1.png"/>
+        </div>
+        <div class="foot_top_ul1">
+            <ul>
+                <h3 class="h3">联系我们</h3>
+                <li> 联系我们</li>
+                <li>关于我们</li>
+                <li>联系电话：15157928000 </li>
+                <li> 公司邮箱：111111111111@mmm</li>
+                <li>公司地址：江苏省一户哈哈哈哈</li>
+            </ul>
+        </div>
+        <div class="foot_top_ul1">
+            <ul>
+                <h3 class="h3">服务条款</h3>
+                <li><a href="#">44444444444</a></li>
+                <li><a href="#">444444</a></li>
+                <li><a href="#">422222222</a></li>
+                <li><a href="#">42222</a></li>
+            </ul>
+        </div>
+        <div class="foot_top_ul1">
+            <ul>
+                <h3 class="h3">常见问题</h3>
+                <li><a href="#">44444444444</a></li>
+                <li><a href="#">444444</a></li>
+                <li><a href="#">422222222</a></li>
+                <li><a href="#">42222</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <p><br></p>
+        <p>所百网络&nbsp&nbsp&nbsp技术支持</p>
+        <p><br></p>
+    </div>
+</div>
+</body>
+</html>
